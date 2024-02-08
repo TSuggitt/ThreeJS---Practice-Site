@@ -1,0 +1,66 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body, html{
+    overflow-x: hidden;
+    overflow-y: hidden;
+   
+}
+
+.webgl {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; /* Ensure canvas is behind other elements */
+}
+
+nav {
+    background-color: transparent; /* Make the background of the nav transparent */
+    color: white;
+    z-index: 2; /* Ensure navigation bar is above canvas */
+    position: absolute; /* Position nav absolutely */
+    top: 0; /* Align to top of viewport */
+    left: 0; /* Align to left of viewport */
+    padding: 4rem 8rem;
+    display: flex;
+    width:100%;
+    justify-content: space-between;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+nav a{
+    text-decoration: none;
+    color:white;
+    font-weight: bold;
+}
+
+nav ul{
+    list-style: none;
+    display:flex;
+    gap:3rem;
+}
+
+
+h1 {
+    color:black;
+    z-index: 2;
+    position: absolute;
+    font-size:3rem;
+    left:32%;
+    top:60%;
+    font-family: 'Courier New', Courier, monospace;
+    text-decoration: none;
+
+}
+
+h1 a{
+    text-decoration: none;
+    color:black;
+}
+
+
+
+

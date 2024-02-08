@@ -1,0 +1,50 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body, html{
+    overflow-x: hidden;
+    overflow-y: hidden;
+   
+}
+
+.webgl{
+    position:absolute;
+    top:0;
+    z-index: 1;
+    left:0
+}
+
+nav{
+    color:white;
+    z-index:2;
+    position:relative;
+    padding: 4rem 8rem;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+nav a{
+    text-decoration: none;
+    color:white;
+    font-weight: bold;
+}
+
+nav ul{
+    list-style: none;
+    display:flex;
+    gap:3rem;
+}
+
+h1 {
+    color:white;
+    z-index: 2;
+    position: absolute;
+    font-size:3rem;
+    left:36%;
+    font-family: 'Courier New', Courier, monospace;
+
+}
