@@ -45,8 +45,8 @@ for(let i=0; i<10; i++){
 
 
 const vase_geo = new THREE.LatheGeometry(points)
-const vase_mat = new THREE.MeshStandardMaterial({
-    color:0xe3735e, metalness:0.9, clearcoat:5, side:THREE.DoubleSide, roughness:0
+const vase_mat = new THREE.MeshPhongMaterial({
+    color:0xe3735e, metalness:0.9, clearcoat:5, side:THREE.DoubleSide, roughness:0, shininess:100, specular:0xffffff
 })
 
 const vase = new THREE.Mesh(vase_geo, vase_mat)
@@ -116,7 +116,7 @@ scene.add(centerMesh)
 const canvasWidth = 10; // Width of the canvas
 const canvasHeight = 6; // Height of the canvas
 const canvasGeometry = new THREE.BoxGeometry(canvasWidth, canvasHeight, 0.3);
-const canvasMaterial = new THREE.MeshStandardMaterial({ color: 0xffffff, metalness:0.5, emissive:0xffffff, emissiveIntensity:0.05, clearcoat:5 });
+const canvasMaterial = new THREE.MeshPhongMaterial({ color: 0xffffff, metalness:0.5, emissive:0xffffff, emissiveIntensity:0.05, clearcoat:5, shininess:100, reflectivity:1 });
 
 // Create painting canvas mesh
 const canvasMesh = new THREE.Mesh(canvasGeometry, canvasMaterial);
@@ -306,6 +306,34 @@ for (let i = 0; i < numClouds; i++) {
     const cloud = createCloud();
     scene.add(cloud);
 }
+
+// armchair
+
+const arm_geometry = new THREE.BoxGeometry(3, 4.5, 1)
+const arm_texture = new THREE.MeshPhongMaterial({
+    color:0x624a2e, metalness:1, shininess:100, specular:0xffffff, reflectivity:1, emissive:0x000000
+})
+const base_geometry = new THREE.BoxGeometry(3, 3, 2)
+
+const arm1 = new THREE.Mesh(arm_geometry, arm_texture)
+const arm2 = new THREE.Mesh(arm_geometry, arm_texture)
+const base = new THREE.Mesh(base_geometry, arm_texture)
+const back = new THREE.Mesh(arm_geometry, arm_texture)
+
+arm1.rotateY(Math.PI/2)
+arm2.rotateY(Math.PI/2)
+base.rotateX(Math.PI/2)
+base.position.set(0,0,2)
+arm1.position.set(-1.7,0,2)
+arm2.position.set(1.7, 0, 2 )
+back.position.set(0,0,3)
+
+
+scene.add(arm1)
+scene.add(arm2)
+scene.add(base)
+scene.add(back)
+
 
 
 //lighting: 
