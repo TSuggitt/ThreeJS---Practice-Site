@@ -1,0 +1,79 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    
+}
+
+body, html{
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    
+    
+    
+   
+}
+body{
+    background: linear-gradient(#27b9f3, #b8e2f2);
+    height:100vh;
+}
+
+.webgl2 {
+    position: absolute;
+    top: 0;
+    left: -25%;
+    z-index: 1; /* Ensure canvas is behind other elements */
+
+}
+
+nav{
+    color:white;
+    z-index:2;
+    position:relative;
+    padding: 4rem 8rem;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Courier New', Courier, monospace;
+    padding-top:5rem;
+    padding-left:5rem;
+    width:100%
+}
+
+nav a{
+    text-decoration: none;
+    color:white;
+    font-weight: bold;
+}
+h3 a{
+    text-decoration: none;
+    color:black
+}
+
+nav ul{
+    list-style: none;
+    display:flex;
+    gap:3rem;
+    
+}
+
+h1 {
+    color:black;
+    z-index: 2;
+    position: absolute;
+    font-size:3rem;
+    top:35%;
+    left:55%;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+h3 {
+    color:black;
+    z-index: 2;
+    position: absolute;
+    font-size:2rem;
+    top:50%;
+    left:47.5%;
+    font-family: 'Courier New', Courier, monospace;
+
+}

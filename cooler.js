@@ -161,14 +161,13 @@ fontLoader.load("https://raw.githubusercontent.com/mrdoob/three.js/dev/examples/
         bevelEnabled: true, // Enable bevel
         bevelThickness: 0.03, // Bevel thickness
         bevelSize: 0.05, // Bevel size
-        bevelSegments: 50,
-// Number of bevel segments
+        bevelSegments: 50,// Number of bevel segments
         
     });
     textGeometry.center()
 
     // Create a material
-    var textMaterial = new THREE.MeshStandardMaterial({ color: 0xff00ff, metalness:0.9, roughness:0.2 }); // Red color
+    var textMaterial = new THREE.MeshStandardMaterial({ color: 0xff00ff, metalness:0.9, roughness:0.2, }); // Red color
 
     // Create a mesh using the text geometry and material
     textMesh = new THREE.Mesh(textGeometry, textMaterial);
@@ -293,13 +292,13 @@ const tl5 = gsap.timeline({defaults: {duration:1}})
 tl5.fromTo('nav', {y:'-100%'}, {y:'0%'})
 
 tl5.fromTo('h1', {y:"1000%"}, {y:"0%"} )
-tl2.fromTo('h1', {opacity:0}, {opacity:1})
+tl5.fromTo('h1', {opacity:0}, {opacity:1})
 
 
 
 
 
-tl2.fromTo(cube_material, { emissiveIntensity: startValues.emissiveIntensity }, { emissiveIntensity: endValues.emissiveIntensity });
+tl.fromTo(cube_material, { emissiveIntensity: startValues.emissiveIntensity }, { emissiveIntensity: endValues.emissiveIntensity });
 tl3.fromTo(camera.position, {x:-6, y:5, z:6}, {x:-5, y:5, z:5} )
 tl2.fromTo(cubelight, {intensity:0}, {intensity:1})
 
