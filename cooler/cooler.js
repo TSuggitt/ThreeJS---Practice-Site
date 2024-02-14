@@ -1,4 +1,4 @@
-import * as THREE from "three";
+import * as THREE from "three"
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { gsap } from "gsap";
 import { TextGeometry } from "three/addons/geometries/TextGeometry.js";
